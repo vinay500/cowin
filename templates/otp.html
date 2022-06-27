@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/otp.css">
+    <title>OTP Verificaton</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="list-item" id="logo-item">
+                <a id="logo" href="\"><img src="{% static 'images\covid19logo.jpg' %}" alt=""></a>
+            </li>
+            <li class="list-item">
+                    <a href="login">
+                        <button class="menu-btn" id="login-btn-item">LOGIN</button>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="msg_div">
+            {% if messages %}
+                {% for message in messages %}
+                    <h1>{{message}}</h1>
+                {% endfor %}
+            {% endif %}
+    </div>
+    <div id="otp-div">
+        <div id="form_heading">
+            <h1>Register or Sign In for Vaccination</h1>
+            <p>An OTP will be sent to your mobile number <br> for verification</p>
+        </div>
+        <form action="" method="post" id="otp-form">
+            {% csrf_token %}
+            <input type="" placeholder="Enter Mobile Number" name="mobile_number">
+            <button type="submit">Get OTP</button>
+        </form>
+    </div>
+</body>
+</html>

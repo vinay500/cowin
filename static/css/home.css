@@ -1,0 +1,79 @@
+body{
+    display:flex;
+    flex-direction:column;
+}
+nav ul{
+    display:flex;
+    flex-direction:row;
+}
+img{
+    width:190px;
+    height:70px;
+}
+nav{
+    border-bottom:1px solid grey;
+}
+nav ul{
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+#register-login-div{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+#register-login-div .list-item{
+    margin:0 30px;
+}
+.menu-btn{
+    font-size:16px;
+    border-radius:60px;
+    outline:none;
+    border:none;
+    box-shawdow:2px 2px grey;
+    background-color:#ffc002;
+    width:200px;
+    height:40px;
+}
+.menu-btn:hover{
+    cursor:pointer;
+}
+#main-div{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+#info-div{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+
+}
+#main-info{
+}
+#main-info h1{
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64px;
+    color: #002060;
+}
+#img-div img{
+    width:300px;
+    height:330px;
+}
+#slot-booking-btn{
+    font-size:16px;
+    border-radius:60px;
+    outline:none;
+    border:none;
+    box-shawdow:2px 2px grey;
+    background-color:#ffc002;
+    width:200px;
+    height:40px;
+}
+#slot-booking-btn:hover{
+    cursor:pointer;
+}

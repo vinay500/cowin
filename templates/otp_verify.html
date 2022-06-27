@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter OTP</title>
+    <link rel="stylesheet" href="static/css/otp_verify.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="list-item" id="logo-item">
+                <a id="logo" href="\"><img src="{% static 'images\covid19logo.jpg' %}" alt=""></a>
+            </li>
+        </ul>
+    </nav>
+    <div id="msg_div">
+        {% if messages %}
+            {% for message in messages %}
+                <h1>{{message}}</h1>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div id="otp-div">
+        <div id="form_heading">
+            <h1>OTP Verification</h1>
+            <p>An OTP has been sent to your Mobile Number</p>
+        </div>
+        <form action="" method="post" id="otp-form">
+            {% csrf_token %}
+            <input type="" placeholder="Enter OTP" name="otp">
+            <button type="submit">Verify & Proceed</button>
+        </form>
+    </div>
+</body>
+</html>

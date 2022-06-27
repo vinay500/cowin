@@ -1,0 +1,90 @@
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+img{
+    width:190px;
+    height:70px;
+}
+nav{
+    border-bottom:1px solid grey;
+}
+
+#login-btn-item{
+    font-size:16px;
+    border-radius:60px;
+    outline:none;
+    border:none;
+    box-shawdow:2px 2px grey;
+    background-color:#ffc002;
+    width:200px;
+    height:40px;
+}
+#login-btn-item:hover{
+    cursor:pointer;
+}
+#otp-div{
+    width:90%;
+    border:1px solid grey;
+    display:flex;
+    flex-direction:column;
+    border:1px solid black;
+    width:50%;
+    text-align:center;
+    align-items:center;
+    /*transform:translate(-50%,-50%);*/
+    margin:0 auto;
+    border-radius:2%;
+    margin-top:20px;
+}
+#otp-form{
+   display:flex;
+   flex-direction:column;
+   padding-bottom:10px;
+}
+#form_heading{
+    font-size:20px;
+    color:#002060;
+    font-weight:900;
+}
+#form_heading h1{
+    color: #001f60;
+    font-size: 22px;
+    margin-bottom: 0;
+    font-weight: 600;
+    margin-top: 15px;
+    font-weight:900;
+}
+#form_heading p{
+    text-align:center;
+    font-weight:400;
+    font-size:15px;
+}
+#otp-form input{
+    padding:10px;
+    border:0;
+    border-bottom:1px solid black;
+    width:90%;
+}
+
+#otp-form button{
+    margin:10px;
+    padding:10px;
+    background-color:#002060;
+    color:white;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    width:90%;
+}
+#msg_div{
+    width:90%;
+    border:1px soild;
+    background-color:red;
+}

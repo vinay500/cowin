@@ -1,0 +1,46 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+<!--    <link rel="stylesheet" href="{% static 'css/login.css' %}">-->
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="list-item" id="logo-item"><a id="logo" href="\"><img src="{% static 'images\covid19logo.jpg' %}" alt=""></a></li>
+        <li class="list-item">
+            <a href="register">
+                <button id="register-btn-item">REGISTER</button>
+            </a>
+        </li>
+
+    </ul>
+</nav>
+    <div id="msg_div">
+        {% if messages %}
+            {% for message in messages %}
+                <h1>{{message}}</h1>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div id="login_div">
+        <div id="form_heading">
+            <h3>Login for Vaccination</h3>
+        </div>
+        <div id="form_div">
+            <form action="" id="login_form" method="post">
+                {% csrf_token %}
+                <input type="text" name="login_aadhaar_number" placeholder="Aadhaar Number">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="year_of_birth" placeholder="Year of Birth(as per in Aadhaar Card)">
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

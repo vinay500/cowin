@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+<!--    <link rel="stylesheet" href="static/css/home.css">-->
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+<!--       <link rel="stylesheet" href="{% static 'css/login.css' %}">-->
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="list-item" id="logo-item"><a id="logo" href="\"><img src="{% static 'images\covid19logo.jpg' %}" alt=""></a></li>
+        <div id="register-login-div">
+            <li class="list-item">
+                <a href="register">
+                    <button class="menu-btn" id="register-btn-item">REGISTER</button>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="login">
+                    <button class="menu-btn" id="login-btn-item">LOGIN</button>
+                </a>
+            </li>
+        </div>
+    </ul>
+</nav>
+{% block content %}
+<div id="main-div">
+    <div id="info-div">
+        <div id="main-info">
+            <h1>Are You Protected <br> Against COVID-19?</h1>
+            <p>क्या आप कोविड-19 से सुरक्षित हैं ?</p>
+        </div>
+        <div id="btn-div">
+            <a href="schedulebook">
+                <button id="slot-booking-btn">BOOK YOUR SLOT</button>
+            </a>
+            <!--<a href="">
+                <button>BOOK YOUR SLOT</button>
+            </a>-->
+        </div>
+    </div>
+    <div id="img-div">
+        <img src="{% static 'images\modi.png' %}" alt="">
+    </div>
+</div>
+
+
+{% endblock %}
+</body>
+</html>

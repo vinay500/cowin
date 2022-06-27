@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slots Booked</title>
+    <link rel="stylesheet" href="static/css/slots.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="list-item" id="logo-item">
+                <a id="logo" href="\"><img src="{% static 'images\covid19logo.jpg' %}" alt=""></a>
+            </li>
+            <div id="menu_div">
+                <li class="list-item">
+                    <a href="scheduleslots_booked">
+                        <button class="menu-btn" id="login-btn-item">Book Your Slot</button>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="logout">
+                        <button class="menu-btn" id="logout-btn-item">Log Out</button>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    <div id="msg_div">
+        {% if messages %}
+            {% for message in messages %}
+                <h1>{{message}}</h1>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div id="slot_div">
+        <div id="slot_heading">
+            <h1>Account Details</h1>
+        </div>
+        {% for slot in slots %}
+        <div id="slot_details_div">
+            <div id="name_div">
+                <h1>{{slot.aadhaar.name}}</h1>
+            </div>
+             <div id="details_div">
+                <div class="details_div_sub_div" id="year_of_birth_div">
+                    <p>Year of Birth: <span class="details_div_sub_div_span">{{slot.aadhaar.year_of_birth}}</span> <p/>
+                </div>
+                 <div class="details_div_sub_div" id="photo_id_proof_div">
+                    <p>Photo ID: <span class="details_div_sub_div_span">{{slot.aadhaar.photo_id_proof}}</span></p>
+                </div>
+                 <div class="details_div_sub_div" id="aadhaar_num_div">
+                    <p>ID Number: <span class="details_div_sub_div_span">{{slot.aadhaar.aadhaar_number}}</span></p>
+                </div>
+             </div>
+             <div id="dose_div">
+                <p>
+                    <span id="dose_number_span">Dose 1|</span>
+                    <span id="dose_name_span">{{slot.vaccine}}</span>
+                </p>
+             </div>
+            <hr>
+         </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

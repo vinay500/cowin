@@ -1,0 +1,101 @@
+body{
+    background-color:#f1f1f1;
+}
+nav{
+    background-color:#fff;
+    box-shadow: -6px 13px 7px -6px rgba(122,106,106,0.75);
+    -webkit-box-shadow: -6px 13px 7px -6px rgba(122,106,106,0.75);
+    -moz-box-shadow: -6px 13px 7px -6px rgba(122,106,106,0.75);
+    top:0;
+    left:0;
+}
+nav ul{
+    display:flex;
+    flex-direction:row;
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    padding:3%;
+}
+img{
+    width:190px;
+    height:70px;
+}
+#login-btn-item{
+    font-size:16px;
+    border-radius:60px;
+    outline:none;
+    border:none;
+    box-shawdow:2px 2px grey;
+    background-color:#ffc002;
+    width:200px;
+    height:40px;
+}
+#login-btn-item:hover{
+    cursor:pointer;
+}
+#slot_div{
+    width: 70%;
+    margin: 2% auto;
+    border-radius:4%;
+    background-color:#fff;
+    box-shadow: 10px 16px 12px -6px rgba(122,106,106,0.75);
+    -webkit-box-shadow: 10px 16px 12px -6px rgba(122,106,106,0.75);
+    -moz-box-shadow: 10px 16px 12px -6px rgba(122,106,106,0.75);
+}
+#slot_heading{
+    font-size:20px;
+    color:#002060;
+    font-weight:900;
+
+}
+#slot_heading h1{
+    color:#002060;
+    padding:0% 2%;
+}
+#slot_details_div{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    border:1px solid black;
+    margin:4%;
+    border-radius:2%;
+    margin-top:20px;
+    padding:15px;
+}
+#name_div{
+    color:#002060;
+}
+#details_div{
+    display:flex;
+    font-size:18px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.details_div_sub_div{
+    visibility: inherit;
+    font-weight:light;
+
+}
+.details_div_sub_div_span{
+    font-weight:600;
+}
+#dose_div{
+    font-size:18px;
+}
+#dose_number_span{
+    color:#41ad49;
+    font-weight:600;
+}
+#dose_name_span{
+    font-weight:600;
+}
+#name_div h1{
+    padding-left:9px;
+}
+#dose_div p{
+    padding-left:9px;
+}

@@ -1,0 +1,76 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book your vaccine</title>
+    <link rel="stylesheet" href="static/css/schedule.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="list-item" id="logo-item">
+            <a id="logo" href="\"><img src="{% static 'images\covid19logo.jpg' %}" alt=""></a>
+        </li>
+        <div id="menu_div">
+            <li class="list-item">
+                <a href="scheduleslots_booked">
+                    <button class="menu-btn" id="login-btn-item">Book Your Slot</button>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="logout">
+                    <button class="menu-btn" id="logout-btn-item">Log Out</button>
+                </a>
+            </li>
+        </div>
+    </ul>
+</nav>
+<div id="msg_div">
+        {% if messages %}
+            {% for message in messages %}
+                <h1>{{message}}</h1>
+            {% endfor %}
+        {% endif %}
+    </div>
+<div id="register_div">
+        <div id="form_heading">
+            <h3>Book Your Slot</h3>
+        </div>
+        <div id="form_div">
+            <form action="" id="register_form" method="post">
+                {% csrf_token %}
+                <input  list="states" placeholder="Select Your State" name="state">
+                <datalist id="states">
+                    <option value="Telangana">
+                    <option value="New Delhi">
+                    <option value="Maharastra">
+                    <option value="Tamil Nadu">
+                    <option value="Andhra Pradesh">
+                </datalist>
+                <input  list="districts" placeholder="Select Your District" name="district">
+                <datalist id="districts">
+                    <option value="Siddipet">
+                    <option value="Kamareddy">
+                    <option value="Hyderabad">
+                    <option value="Ranga Reddy">
+                    <option value="Sanga Reddy">
+                </datalist>
+                <input  list="vaccines" placeholder="Choose your Vaccine" name="vaccine">
+                <datalist id="vaccines">
+                    <option value="Covishield">
+                    <option value="Covaxin">
+                </datalist>
+                <input name="slot" placeholder="Book Your Slot" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" value="(this.today)"/>
+                <button type="submit">Book Your Slot</button>
+            </form>
+        </div>
+    </div>
+<script>
+    let today = new Date().toISOString().substr(0, 10);
+    document.querySelector("#date").value = today;
+</script>
+</body>
+</html>
+{% endblock %}

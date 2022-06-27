@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css\register.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="static\css\register.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="list-item" id="logo-item">
+                <a id="logo" href="\"><img src="{% static 'images\covid19logo.jpg' %}" alt=""></a>
+            </li>
+            <li class="list-item">
+                    <a href="login">
+                        <button class="menu-btn" id="login-btn-item">LOGIN</button>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="msg_div">
+        {% if messages %}
+            {% for message in messages %}
+                <h1>{{message}}</h1>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div id="register_div">
+        <div id="form_heading">
+            <h3>Register for Vaccination</h3>
+        </div>
+        <div id="form_div">
+            <form action="" id="register_form" method="post">
+                {% csrf_token %}
+                <input  list="photo_proof" name="photo_id_proof" placeholder="Photo ID Proof">
+                <datalist id="photo_proof">
+                    <option value="Aadhaar Card">
+                    <option value="Driving License">
+                    <option value="Pan Card">
+                    <option value="Passport">
+                    <option value="Pension Passbook">
+                </datalist>
+                <input type="text" name="aadhaar_number" placeholder="Aadhaar Number">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="year_of_birth" placeholder="Year of Birth(as per in Aadhaar Card)">
+                <input  list="gender" name="gender" placeholder="Gender">
+                <datalist id="gender">
+                    <option value="Male">
+                    <option value="Female">
+                    <option value="Other">
+                </datalist>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
