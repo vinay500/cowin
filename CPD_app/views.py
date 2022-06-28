@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate,login,logout
 import random
 import http.client
 from django.conf import settings
-from twilio.rest import Client
+# from twilio.rest import Client
 
 
 # Create your views here.

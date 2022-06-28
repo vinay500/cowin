@@ -23,20 +23,21 @@ img{
     width:190px;
     height:70px;
 }
-#login-btn-item{
+#logout-btn-item{
     font-size:16px;
     border-radius:60px;
     outline:none;
     border:none;
-    box-shawdow:2px 2px grey;
+    box-shadow:2px 2px grey;
     background-color:#ffc002;
     width:200px;
     height:40px;
 }
-#login-btn-item:hover{
+#logout-btn-item:hover{
     cursor:pointer;
 }
 #slot_div{
+    padding-bottom: 1%;
     width: 70%;
     margin: 2% auto;
     border-radius:4%;
@@ -46,6 +47,7 @@ img{
     -moz-box-shadow: 10px 16px 12px -6px rgba(122,106,106,0.75);
 }
 #slot_heading{
+    padding-top: 1%;
     font-size:20px;
     color:#002060;
     font-weight:900;
