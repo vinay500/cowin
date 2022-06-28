@@ -1,2 +1,3 @@
-# library_management_system_2.0
-this is an Library Management System where we can store our book details it has login, logout, authentication functionalities
+# COWIN
+this is a replica of cowin website
+in this website users can register, login, book slots for vaccination and view slots booked and logout
